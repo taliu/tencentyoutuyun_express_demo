@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人脸识别</title>
+    <style>
+        body { 
+            text-align:center;
+         }
+        .box {
+            position: absolute;
+            border: 1px solid red;
+        }
+        
+        .msg {
+            position: absolute;
+            color: white;
+            height: 30px;
+            font-size: 4px;
+            text-align:center;
+        }
+    </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/jQueryFileUpload/jquery.ui.widget.js"></script>
+    <script src="/js/jQueryFileUpload/jquery.iframe-transport.js"></script>
+    <script src="/js/jQueryFileUpload/jquery.fileupload.js"></script>
+    <script src="/js/jQueryFileUpload/jquery.xdr-transport.js"></script>
+    <script src="/js/face.js"></script>
+</head>
+
+<body>
+    <h1>人脸检测</h1>
+    <img src="http://www.36588.com.cn/active/active/ftp/theme/20150113photo/family_photo.png" alt="" id='faceImg'>
+    <p>
+        图片地址:<input style='width:350px' type="text" name='imgUrl' id='imgUrl' value="http://www.36588.com.cn/active/active/ftp/theme/20150113photo/family_photo.png">
+        <button id='btn'>识别</button><label id='msg' style=" display:none ">正在识别...</label>
+    </p>
+    <label for="">或</label>
+    <p>
+         上传图片:<input id="fileupload" type="file" name="file" data-url="/upload" multiple value="上传图片">
+    </p>
+</body>
+
+</html>

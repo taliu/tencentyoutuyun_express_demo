@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人脸识别</title>
+    <style>
+        body { 
+            text-align:center;
+            padding: 30px;
+         }
+         .left{
+            float:left;
+            width: 45%;
+            overflow: hidden
+         }
+         .right{
+             float: right;
+            width: 45%;
+            overflow: hidden
+         }
+         .clear{
+             clear: both
+         }
+   </style>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/js/jQueryFileUpload/jquery.ui.widget.js"></script>
+    <script src="/js/jQueryFileUpload/jquery.iframe-transport.js"></script>
+    <script src="/js/jQueryFileUpload/jquery.fileupload.js"></script>
+    <script src="/js/jQueryFileUpload/jquery.xdr-transport.js"></script>
+    <script src="/js/facecompare.js"></script>
+
+</head>
+
+<body>
+    <h1>人脸比对</h1>
+   <div class='left'>
+    <img src="http://img001.photo.21cn.com/photos/album/20110421/o/FA907FA940929BE3AB7444EC21DBA81A.png" alt="" id='faceImgA'>
+    <p>
+        图片地址:<input style='width:350px' type="text" id='imgUrlA' value="http://img001.photo.21cn.com/photos/album/20110421/o/FA907FA940929BE3AB7444EC21DBA81A.png">
+    </p>
+    <label for="">或</label>
+    <p>
+         上传图片:<input id="fileuploadA" type="file" name="file"  data-url="/upload" multiple value="上传图片">
+    </p>
+   </div>
+
+    <div class='right'>
+    <img src="http://jiangsu.china.com.cn/uploadfile/2015/0803/1438569538870468.jpg" alt="" id='faceImgB'>
+    <p>
+        图片地址:<input style='width:350px' type="text" id='imgUrlB' value="http://jiangsu.china.com.cn/uploadfile/2015/0803/1438569538870468.jpg">
+    </p>
+    <label for="">或</label>
+    <p>
+         上传图片:<input id="fileuploadB" type="file" name="file" data-url="/upload" multiple value="上传图片">
+    </p>
+   </div>
+   <p class="clear">
+      <button style="width:80px;height:50px" id='btn'>对比</button> <label for="" id='msg'>正在对比...</label>
+      <p>
+      <b id='result'>
+      </b>
+      </p>
+   </p>
+
+</body>
+
+</html>
