@@ -63,7 +63,7 @@ app.post('/upload', upload.single('file'), function (req, res) {
         return res.json({ message: 'upload file is null' });
     }
     let newPath = req.file.path + req.file.originalname;
-    let url = /imgs/ + newPath.split("\\imgs\\").pop();
+    let url = /imgs/ + newPath.split(req.file.destination+'\\').pop();
     fs.renameSync(req.file.path, newPath);
     res.json({ url: `${req.protocol}://${req.get('host')}${url}` });
 });
@@ -73,7 +73,7 @@ app.use(function (err, req, res, next) {
     return res.error(err.message, err.status || 500);
 });
 
-app.listen(8080, function () {
-    console.log('listen at: 127.0.0.1:8080');
+app.listen(8081, function () {
+    console.log('listen at: 127.0.0.1:8081');
 });
 
