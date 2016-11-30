@@ -1,5 +1,5 @@
 module.exports = {
-    appid: 'you appid',
-    secretId: 'xxxxxx',
-    secretKey: 'xxxxxxx'
+    appid: 'xxxxx',
+    secretId: 'xxxxxxx',
+    secretKey: 'xxxxxxxx'
 };

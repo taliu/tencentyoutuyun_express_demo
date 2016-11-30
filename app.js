@@ -63,7 +63,7 @@ app.post('/upload', upload.single('file'), function (req, res) {
         return res.json({ message: 'upload file is null' });
     }
     let newPath = req.file.path + req.file.originalname;
-    let url = /imgs/ + newPath.split(req.file.destination+'\\').pop();
+    let url = /imgs/ + req.file.path.replace('\\','/').split('/').pop()+ req.file.originalname;
     fs.renameSync(req.file.path, newPath);
     res.json({ url: `${req.protocol}://${req.get('host')}${url}` });
 });
